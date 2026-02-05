@@ -1,0 +1,9 @@
+.env
+*.env
+
+*-local.yml
+application-local.yml
+
+.idea/
+.vscode/
+*.iml
