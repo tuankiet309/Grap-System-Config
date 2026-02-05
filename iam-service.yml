@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: iam-service
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:defaultSecretKeyForDevelopmentOnly123456789012345678901234567890}
+  access-token-expiration: ${JWT_ACCESS_EXPIRATION:900000}      # 15 minutes
+  refresh-token-expiration: ${JWT_REFRESH_EXPIRATION:604800000} # 7 days
+
+# OAuth2 (for Google login, etc.)
+spring.security.oauth2.client:
+  registration:
+    google:
+      client-id: ${GOOGLE_CLIENT_ID:your-google-client-id}
+      client-secret: ${GOOGLE_CLIENT_SECRET:your-google-client-secret}
+      scope: profile,email
+      redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"

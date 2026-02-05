@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/iam_db
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+
+jwt:
+  secret: devSecretKey123456789012345678901234567890123456789012345678901234567890
+
+logging:
+  level:
+    com.ridehailing.iam: DEBUG
+    org.springframework.security: DEBUG

@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: ${IAM_DATABASE_URL}
+    username: ${IAM_DB_USERNAME}
+    password: ${IAM_DB_PASSWORD}
+
+jwt:
+  secret: ${JWT_SECRET}  
+
+logging:
+  level:
+    com.ridehailing.iam: INFO
+    org.springframework.security: WARN
